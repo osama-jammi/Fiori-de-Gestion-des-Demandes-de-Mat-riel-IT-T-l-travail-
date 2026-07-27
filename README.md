@@ -1,4 +1,4 @@
-#  SAP Fiori Elements - Gestion des Demandes de Matériel IT & Télétravail (Low-Code / Key User Extensibility)
+# 🚀 SAP Fiori Elements - Gestion des Demandes de Matériel IT & Télétravail (Low-Code / Key User Extensibility)
 
 [![SAP S/4HANA](https://img.shields.io/badge/SAP%20S%2F4HANA-Clean%20Core-008FD3?style=for-the-badge&logo=sap)](https://www.sap.com)
 [![Fiori Elements](https://img.shields.io/badge/UI-SAP%20Fiori%20Elements-F0AB00?style=for-the-badge&logo=sap)](https://fiori.tools)
@@ -19,7 +19,7 @@ Dans le cadre du passage au travail hybride (Télétravail), le service DSI et R
 * ⚡ **Zéro Code ABAP Lourd :** L'intégralité du modèle de données, du service OData et de l'interface Fiori Elements a été générée automatiquement sans ouvrir Eclipse ADT.
 * 🛡️ **100% Clean Core & Upgrade-Safe :** Aucun impact sur le noyau standard SAP. Résistant à 100% aux montées de version annuelles de S/4HANA.
 * 🎨 **UI Adaptation :** Personnalisation de l'interface utilisateur à chaud par glisser-déposer.
-* 📊 **Gestion Agile sous JIRA :** Projet découpé en Epics, User Stories et Tâches techniques avec des critères d'acceptation (DoD) rigoureux (fichier d'import JIRA inclus : `jira_import.csv`).
+* 📊 **Gestion Agile sous JIRA :** Projet découpé et piloté en Epics et User Stories avec des critères d'acceptation (DoD) rigoureux.
 
 ---
 
@@ -43,10 +43,13 @@ graph TD
 
 ---
 
-## 📥 Gestion de Projet Agile & Import JIRA
-Ce projet est entièrement découpé en tâches professionnelles (Scrum / Agile).
-* 👉 Consultez le fichier **[01_JIRA_AGILE_WORKFLOW.md](01_JIRA_AGILE_WORKFLOW.md)** pour voir le détail des Epics, User Stories et de la Definition of Done (DoD).
-* 👉 **Import dans JIRA Software :** Un fichier **`jira_import.csv`** est disponible à la racine du dépôt. Dans JIRA ➡️ Paramètres ➡️ *Importation de données externes (External System Import)* ➡️ sélectionnez `jira_import.csv` pour recréer tout le board de projet en 3 clics !
+## 📥 Gestion de Projet Agile & Backlog JIRA (GDDDMRITLT)
+Ce projet est entièrement découpé en tâches professionnelles (Scrum / Agile) et importé dans notre instance Jira Software (projet `GDDDMRITLT`).
+* 👉 Consultez le fichier **[01_JIRA_AGILE_WORKFLOW.md](01_JIRA_AGILE_WORKFLOW.md)** pour voir le détail technique complet des 9 tickets (de `GDDDMRITLT-1` à `GDDDMRITLT-9`).
+
+### 📸 Vue du Backlog JIRA Importé :
+> **📌 Capture de la liste de nos tickets dans JIRA à ajouter dans :** `screenshots/00_jira_backlog.png`
+![Backlog JIRA Importé avec succès](screenshots/00_jira_backlog.png)
 
 ---
 
@@ -54,7 +57,7 @@ Ce projet est entièrement découpé en tâches professionnelles (Scrum / Agile)
 
 Voici les étapes techniques précises à réaliser dans votre système SAP Fiori. Dès que vous ajoutez une capture d'écran dans le dossier `screenshots/` avec le nom de fichier indiqué, elle s'affichera automatiquement ci-dessous sur votre GitHub !
 
-### 🛠️ Étape 1 : Ouverture de l'application "Custom Business Objects" (Ticket FIORI-101)
+### 🛠️ Étape 1 : Ouverture de l'application "Custom Business Objects" (Ticket GDDDMRITLT-2)
 1. Connectez-vous à votre SAP Fiori Launchpad (via `/n/UI2/FLP`).
 2. Tapez `Custom Business Objects` dans la recherche et ouvrez l'application (`F1712`).
 > **📌 Image de validation à ajouter dans `screenshots/01_cbo_app_open.png` :**
@@ -62,7 +65,7 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
 
 ---
 
-### 🛠️ Étape 2 : Création de l'Objet Métier `YY1_EQUIPMENTREQUEST` (Ticket FIORI-102)
+### 🛠️ Étape 2 : Création de l'Objet Métier `YY1_EQUIPMENTREQUEST` (Ticket GDDDMRITLT-4)
 1. Cliquez sur **`+` (New)**.
 2. Nom : `Equipment Request` | Identifier : `YY1_EQUIPMENTREQUEST`.
 3. **Cochez les 3 cases Low-Code :** ☑️ *Determination and Validation*, ☑️ *UI Generation*, ☑️ *Service Generation*.
@@ -71,7 +74,7 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
 
 ---
 
-### 🛠️ Étape 3 : Définition des Champs et Publication (Ticket FIORI-102)
+### 🛠️ Étape 3 : Définition des Champs et Publication (Ticket GDDDMRITLT-4)
 1. Ajoutez les 5 champs : `RequesterName` (Text 40), `Department` (Text 20), `EquipmentType` (Code List : `ECRAN`, `CLAVIER`, `CASQUE`), `EstimatedPrice` (Amount + Currency), `RequestStatus` (Code List : `NEW`, `APPR`, `REJ`).
 2. Cliquez sur **Publish** et attendez 2 minutes que le statut passe à **Published**.
 > **📌 Image de validation à ajouter dans `screenshots/03_fields_list_published.png` :**
@@ -79,7 +82,7 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
 
 ---
 
-### 🛠️ Étape 4 : Logique Métier In-App (Ticket FIORI-103)
+### 🛠️ Étape 4 : Logique Métier In-App (Ticket GDDDMRITLT-6)
 1. Allez dans *Determination and Validation* ➡️ **New Determination** (*After Modification*).
 2. Nom : `SetDefaultStatus`.
 3. Dans l'éditeur Web ABAP Sandbox, collez :
@@ -94,7 +97,7 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
 
 ---
 
-### 🛠️ Étape 5 : Assignation au Catalogue et Découverte de la Tuile (Ticket FIORI-105)
+### 🛠️ Étape 5 : Assignation au Catalogue et Découverte de la Tuile (Ticket GDDDMRITLT-9)
 1. Dans l'application **Custom Catalog Extensions** (`F1484`), assignez `YY1_EQUIPMENTREQUEST` à votre catalogue utilisateur.
 2. Retournez sur le Launchpad : Votre tuile est prête !
 > **📌 Image de validation à ajouter dans `screenshots/05_fiori_launchpad_tile.png` :**
@@ -102,7 +105,7 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
 
 ---
 
-### 🏁 Étape 6 : RÉSULTAT FINAL EN PRODUCTION (Recette UAT & UI Adaptation)
+### 🏁 Étape 6 : RÉSULTAT FINAL EN PRODUCTION (Recette UAT & UI Adaptation - Ticket GDDDMRITLT-7)
 Voici le résultat ultime de votre développement Low-Code en fonctionnement sur le Launchpad ! L'application Fiori Elements est active, les données de test sont créées, la logique pré-remplit le statut sur `NEW` et les colonnes ont été réorganisées ergonomiquement via *Adapt UI*.
 
 > **📌 Image finale de votre application en production à ajouter dans `screenshots/06_final_fiori_app_uat.png` :**
