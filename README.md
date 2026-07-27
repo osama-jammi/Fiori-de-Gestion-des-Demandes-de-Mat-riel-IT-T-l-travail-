@@ -96,4 +96,13 @@ Voici les étapes techniques précises réalisées dans votre système SAP Fiori
 ![Capture 4 : Logique In-App dans l'éditeur Web](screenshots/04_custom_logic_editor.png)
 
 ---
+
+### 🛠️ Étape 5 : Assignation au Catalogue et Découverte de la Tuile (Ticket GDDDMRITLT-9)
+1. Dans l'application **Custom Catalog Extensions** (`F1484`), assignez `YY1_EQUIPMENTREQUEST` à votre catalogue utilisateur.
+2. Retournez sur le Launchpad : Votre tuile est prête !
+> **📌 Image de validation (`screenshots/05_fiori_launchpad_tile.png`) :**
+![Capture 5 : La tuile sur le Fiori Launchpad](screenshots/05_fiori_launchpad_tile.png)
+
+---
 *Projet réalisé et certifié 100% Clean Core Low-Code Extensibility.*
+
