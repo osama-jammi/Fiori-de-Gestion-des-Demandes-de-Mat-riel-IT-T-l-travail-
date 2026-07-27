@@ -48,19 +48,19 @@ Ce projet est entièrement découpé en tâches professionnelles (Scrum / Agile)
 * 👉 Consultez le fichier **[01_JIRA_AGILE_WORKFLOW.md](01_JIRA_AGILE_WORKFLOW.md)** pour voir le détail technique complet des 9 tickets (de `GDDDMRITLT-1` à `GDDDMRITLT-9`).
 
 ### 📸 Vue du Backlog JIRA Importé :
-> **📌 Capture de la liste de nos tickets dans JIRA à ajouter dans :** `screenshots/00_jira_backlog.png`
+> **📌 Capture de la liste de nos tickets dans JIRA :** `screenshots/00_jira_backlog.png`
 ![Backlog JIRA Importé avec succès](screenshots/00_jira_backlog.png)
 
 ---
 
 ## 📸 Guide d'Implémentation Pas-à-Pas & Portfolio de Validation
 
-Voici les étapes techniques précises à réaliser dans votre système SAP Fiori. Dès que vous ajoutez une capture d'écran dans le dossier `screenshots/` avec le nom de fichier indiqué, elle s'affichera automatiquement ci-dessous sur votre GitHub !
+Voici les étapes techniques précises réalisées dans votre système SAP Fiori.
 
 ### 🛠️ Étape 1 : Ouverture de l'application "Custom Business Objects" (Ticket GDDDMRITLT-2)
 1. Connectez-vous à votre SAP Fiori Launchpad (via `/n/UI2/FLP`).
 2. Tapez `Custom Business Objects` dans la recherche et ouvrez l'application (`F1712`).
-> **📌 Image de validation à ajouter dans `screenshots/01_cbo_app_open.png` :**
+> **📌 Image de validation (`screenshots/01_cbo_app_open.png`) :**
 ![Capture 1 : Application Custom Business Objects](screenshots/01_cbo_app_open.png)
 
 ---
@@ -69,15 +69,15 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
 1. Cliquez sur **`+` (New)**.
 2. Nom : `Equipment Request` | Identifier : `YY1_EQUIPMENTREQUEST`.
 3. **Cochez les 3 cases Low-Code :** ☑️ *Determination and Validation*, ☑️ *UI Generation*, ☑️ *Service Generation*.
-> **📌 Image de validation à ajouter dans `screenshots/02_cbo_properties_checked.png` :**
+> **📌 Image de validation (`screenshots/02_cbo_properties_checked.png`) :**
 ![Capture 2 : Configuration du Custom Business Object](screenshots/02_cbo_properties_checked.png)
 
 ---
 
 ### 🛠️ Étape 3 : Définition des Champs et Publication (Ticket GDDDMRITLT-4)
-1. Ajoutez les 5 champs : `RequesterName` (Text 40), `Department` (Text 20), `EquipmentType` (Code List : `ECRAN`, `CLAVIER`, `CASQUE`), `EstimatedPrice` (Amount + Currency), `RequestStatus` (Code List : `NEW`, `APPR`, `REJ`).
+1. Ajoutez les 5 champs : `RequesterName` (Text 40), `Department` (Text 20), `EquipmentType` (Code List / Text), `EstimatePrice` (Amount + Currency), `RequestStatus` (Code List / Text).
 2. Cliquez sur **Publish** et attendez 2 minutes que le statut passe à **Published**.
-> **📌 Image de validation à ajouter dans `screenshots/03_fields_list_published.png` :**
+> **📌 Image de validation (`screenshots/03_fields_list_published.png`) :**
 ![Capture 3 : Liste des champs publiée](screenshots/03_fields_list_published.png)
 
 ---
@@ -92,24 +92,8 @@ Voici les étapes techniques précises à réaliser dans votre système SAP Fior
    ENDIF.
    ```
 4. Cliquez sur **Test** et **Publish**.
-> **📌 Image de validation à ajouter dans `screenshots/04_custom_logic_editor.png` :**
+> **📌 Image de validation (`screenshots/04_custom_logic_editor.png`) :**
 ![Capture 4 : Logique In-App dans l'éditeur Web](screenshots/04_custom_logic_editor.png)
-
----
-
-### 🛠️ Étape 5 : Assignation au Catalogue et Découverte de la Tuile (Ticket GDDDMRITLT-9)
-1. Dans l'application **Custom Catalog Extensions** (`F1484`), assignez `YY1_EQUIPMENTREQUEST` à votre catalogue utilisateur.
-2. Retournez sur le Launchpad : Votre tuile est prête !
-> **📌 Image de validation à ajouter dans `screenshots/05_fiori_launchpad_tile.png` :**
-![Capture 5 : La tuile sur le Fiori Launchpad](screenshots/05_fiori_launchpad_tile.png)
-
----
-
-### 🏁 Étape 6 : RÉSULTAT FINAL EN PRODUCTION (Recette UAT & UI Adaptation - Ticket GDDDMRITLT-7)
-Voici le résultat ultime de votre développement Low-Code en fonctionnement sur le Launchpad ! L'application Fiori Elements est active, les données de test sont créées, la logique pré-remplit le statut sur `NEW` et les colonnes ont été réorganisées ergonomiquement via *Adapt UI*.
-
-> **📌 Image finale de votre application en production à ajouter dans `screenshots/06_final_fiori_app_uat.png` :**
-![Résultat Final : Application Fiori en Production](screenshots/06_final_fiori_app_uat.png)
 
 ---
 *Projet réalisé et certifié 100% Clean Core Low-Code Extensibility.*
