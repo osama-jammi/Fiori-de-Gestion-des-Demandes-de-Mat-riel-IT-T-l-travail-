@@ -19,7 +19,7 @@ Dans le cadre du passage au travail hybride (Télétravail), le service DSI et R
 * ⚡ **Zéro Code ABAP Lourd :** L'intégralité du modèle de données, du service OData et de l'interface Fiori Elements a été générée automatiquement sans ouvrir Eclipse ADT.
 * 🛡️ **100% Clean Core & Upgrade-Safe :** Aucun impact sur le noyau standard SAP. Résistant à 100% aux montées de version annuelles de S/4HANA.
 * 🎨 **UI Adaptation :** Personnalisation de l'interface utilisateur à chaud par glisser-déposer.
-* 📊 **Gestion Agile sous JIRA :** Projet découpé en Epics, User Stories et Tâches techniques avec des critères d'acceptation (DoD) rigoureux.
+* 📊 **Gestion Agile sous JIRA :** Projet découpé en Epics, User Stories et Tâches techniques avec des critères d'acceptation (DoD) rigoureux (fichier d'import JIRA inclus : `jira_import.csv`).
 
 ---
 
@@ -43,22 +43,70 @@ graph TD
 
 ---
 
-## 📂 Structure de ce Dépôt GitHub
-
-| Fichier / Dossier | Description |
-| :--- | :--- |
-| **`README.md`** | Le présent document de présentation globale du projet. |
-| **`01_JIRA_AGILE_WORKFLOW.md`** | 📋 La gestion de projet complète type **JIRA** (Epics, User Stories, Tasks, Definition of Done). |
-| **`02_GUIDE_ET_SCREENSHOTS.md`** | 📸 Guide pas-à-pas d'implémentation dans Fiori avec **emplacements pour les captures d'écran** à chaque étape. |
-| **`screenshots/`** | Répertoire destiné à stocker toutes les captures d'écran (preuves de réalisation et tests UAT). |
+## 📥 Gestion de Projet Agile & Import JIRA
+Ce projet est entièrement découpé en tâches professionnelles (Scrum / Agile).
+* 👉 Consultez le fichier **[01_JIRA_AGILE_WORKFLOW.md](01_JIRA_AGILE_WORKFLOW.md)** pour voir le détail des Epics, User Stories et de la Definition of Done (DoD).
+* 👉 **Import dans JIRA Software :** Un fichier **`jira_import.csv`** est disponible à la racine du dépôt. Dans JIRA ➡️ Paramètres ➡️ *Importation de données externes (External System Import)* ➡️ sélectionnez `jira_import.csv` pour recréer tout le board de projet en 3 clics !
 
 ---
 
-## 🧭 Comment Consulter ce Projet ?
+## 📸 Guide d'Implémentation Pas-à-Pas & Portfolio de Validation
 
-1. Commencez par lire le **[Workflow Agile JIRA (01_JIRA_AGILE_WORKFLOW.md)](01_JIRA_AGILE_WORKFLOW.md)** pour comprendre les exigences métiers et la découpe professionnelle du travail.
-2. Suivez ensuite le **[Guide d'Implémentation Pas-à-Pas (02_GUIDE_ET_SCREENSHOTS.md)](02_GUIDE_ET_SCREENSHOTS.md)** pour reproduire ou vérifier les manipulations dans votre système SAP Fiori.
-3. Rajoutez vos propres captures dans le dossier `screenshots/` pour alimenter votre portfolio !
+Voici les étapes techniques précises à réaliser dans votre système SAP Fiori. Dès que vous ajoutez une capture d'écran dans le dossier `screenshots/` avec le nom de fichier indiqué, elle s'affichera automatiquement ci-dessous sur votre GitHub !
+
+### 🛠️ Étape 1 : Ouverture de l'application "Custom Business Objects" (Ticket FIORI-101)
+1. Connectez-vous à votre SAP Fiori Launchpad (via `/n/UI2/FLP`).
+2. Tapez `Custom Business Objects` dans la recherche et ouvrez l'application (`F1712`).
+> **📌 Image de validation à ajouter dans `screenshots/01_cbo_app_open.png` :**
+![Capture 1 : Application Custom Business Objects](screenshots/01_cbo_app_open.png)
 
 ---
-*Projet réalisé dans le cadre de la maîtrise avancée de SAP Fiori et des bonnes pratiques Clean Core S/4HANA.*
+
+### 🛠️ Étape 2 : Création de l'Objet Métier `YY1_EQUIPMENTREQUEST` (Ticket FIORI-102)
+1. Cliquez sur **`+` (New)**.
+2. Nom : `Equipment Request` | Identifier : `YY1_EQUIPMENTREQUEST`.
+3. **Cochez les 3 cases Low-Code :** ☑️ *Determination and Validation*, ☑️ *UI Generation*, ☑️ *Service Generation*.
+> **📌 Image de validation à ajouter dans `screenshots/02_cbo_properties_checked.png` :**
+![Capture 2 : Configuration du Custom Business Object](screenshots/02_cbo_properties_checked.png)
+
+---
+
+### 🛠️ Étape 3 : Définition des Champs et Publication (Ticket FIORI-102)
+1. Ajoutez les 5 champs : `RequesterName` (Text 40), `Department` (Text 20), `EquipmentType` (Code List : `ECRAN`, `CLAVIER`, `CASQUE`), `EstimatedPrice` (Amount + Currency), `RequestStatus` (Code List : `NEW`, `APPR`, `REJ`).
+2. Cliquez sur **Publish** et attendez 2 minutes que le statut passe à **Published**.
+> **📌 Image de validation à ajouter dans `screenshots/03_fields_list_published.png` :**
+![Capture 3 : Liste des champs publiée](screenshots/03_fields_list_published.png)
+
+---
+
+### 🛠️ Étape 4 : Logique Métier In-App (Ticket FIORI-103)
+1. Allez dans *Determination and Validation* ➡️ **New Determination** (*After Modification*).
+2. Nom : `SetDefaultStatus`.
+3. Dans l'éditeur Web ABAP Sandbox, collez :
+   ```abap
+   IF equipmentrequest-requeststatus IS INITIAL.
+     equipmentrequest-requeststatus = 'NEW'.
+   ENDIF.
+   ```
+4. Cliquez sur **Test** et **Publish**.
+> **📌 Image de validation à ajouter dans `screenshots/04_custom_logic_editor.png` :**
+![Capture 4 : Logique In-App dans l'éditeur Web](screenshots/04_custom_logic_editor.png)
+
+---
+
+### 🛠️ Étape 5 : Assignation au Catalogue et Découverte de la Tuile (Ticket FIORI-105)
+1. Dans l'application **Custom Catalog Extensions** (`F1484`), assignez `YY1_EQUIPMENTREQUEST` à votre catalogue utilisateur.
+2. Retournez sur le Launchpad : Votre tuile est prête !
+> **📌 Image de validation à ajouter dans `screenshots/05_fiori_launchpad_tile.png` :**
+![Capture 5 : La tuile sur le Fiori Launchpad](screenshots/05_fiori_launchpad_tile.png)
+
+---
+
+### 🏁 Étape 6 : RÉSULTAT FINAL EN PRODUCTION (Recette UAT & UI Adaptation)
+Voici le résultat ultime de votre développement Low-Code en fonctionnement sur le Launchpad ! L'application Fiori Elements est active, les données de test sont créées, la logique pré-remplit le statut sur `NEW` et les colonnes ont été réorganisées ergonomiquement via *Adapt UI*.
+
+> **📌 Image finale de votre application en production à ajouter dans `screenshots/06_final_fiori_app_uat.png` :**
+![Résultat Final : Application Fiori en Production](screenshots/06_final_fiori_app_uat.png)
+
+---
+*Projet réalisé et certifié 100% Clean Core Low-Code Extensibility.*

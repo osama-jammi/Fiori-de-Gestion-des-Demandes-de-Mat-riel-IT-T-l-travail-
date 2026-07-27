@@ -6,6 +6,18 @@ Ce document présente le carnet de produit (Product Backlog), les Epics, les Use
 
 ---
 
+## 📥 Comment Importer ce Projet directement dans votre JIRA ?
+
+Un fichier formaté spécialement pour l'importateur automatique de JIRA est fourni à la racine de ce dépôt : **`jira_import.csv`**.
+
+### 🛠️ Guide d'importation dans JIRA Software (en 3 clics) :
+1. Dans votre instance JIRA, cliquez en haut sur **Projets** ➡️ **Créer un projet** (choisissez *Scrum* ou *Kanban* et nommez-le par exemple `FIORI`).
+2. Cliquez sur l'icône **Paramètres (Engrenage ⚙️)** en haut à droite ➡️ **Système** (System) ➡️ dans le menu de gauche, sélectionnez **Importation de données externes (External System Import)**.
+3. Choisissez **CSV**, sélectionnez le fichier `jira_import.csv` de ce dépôt, sélectionnez votre projet, puis cliquez sur **Importer**. 
+   * 👉 **Résultat :** JIRA va recréer automatiquement toutes vos Epics, User Stories, descriptions et Story Points ! Vous aurez un vrai tableau Scrum d'équipe SAP !
+
+---
+
 ## 🎯 La Norme de Qualité : "Definition of Done" (DoD) Clean Core
 
 Pour qu'un ticket JIRA soit validé et déplacé dans la colonne **"DONE" (Terminé)**, il doit obligatoirement respecter la check-list suivante :
@@ -13,7 +25,7 @@ Pour qu'un ticket JIRA soit validé et déplacé dans la colonne **"DONE" (Termi
 - [ ] **Respect de la couche Tier 1 :** Toutes les extensions sont préfixées par `YY1_` (imposé par le standard Key User).
 - [ ] **Génération UI sans erreur :** L'application Fiori Elements s'affiche sans erreur console dans le navigateur.
 - [ ] **Test UAT validé :** Un scénario complet de création et modification a été testé avec un rôle utilisateur standard.
-- [ ] **Documentation et Captures :** Les captures d'écran de validation ont été ajoutées dans le dépôt GitHub.
+- [ ] **Documentation et Captures :** Les captures d'écran de validation ont été ajoutées dans le dépôt GitHub et s'affichent sur le `README.md`.
 
 ---
 
