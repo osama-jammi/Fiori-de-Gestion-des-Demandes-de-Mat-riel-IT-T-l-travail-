@@ -1,4 +1,4 @@
-# 🚀 SAP Fiori Elements - Gestion des Demandes de Matériel IT & Télétravail (Low-Code / Key User Extensibility)
+#  SAP Fiori Elements - Gestion des Demandes de Matériel IT & Télétravail (Low-Code / Key User Extensibility)
 
 [![SAP S/4HANA](https://img.shields.io/badge/SAP%20S%2F4HANA-Clean%20Core-008FD3?style=for-the-badge&logo=sap)](https://www.sap.com)
 [![Fiori Elements](https://img.shields.io/badge/UI-SAP%20Fiori%20Elements-F0AB00?style=for-the-badge&logo=sap)](https://fiori.tools)
