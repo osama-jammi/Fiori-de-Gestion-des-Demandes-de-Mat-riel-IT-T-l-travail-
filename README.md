@@ -104,5 +104,14 @@ Voici les étapes techniques précises réalisées dans votre système SAP Fiori
 ![Capture 5 : La tuile sur le Fiori Launchpad](screenshots/05_fiori_launchpad_tile.png)
 
 ---
+
+### 🏁 Étape 6 : RÉSULTAT FINAL EN PRODUCTION (Recette UAT & UI Adaptation - Ticket GDDDMRITLT-7)
+Voici le résultat ultime de votre développement Low-Code en fonctionnement sur le Launchpad ! L'application Fiori Elements est active, les données de test sont créées, la logique pré-remplit le statut sur `NEW` et les colonnes ont été réorganisées ergonomiquement via *Adapt UI*.
+
+> **📌 Image finale de votre application en production (`screenshots/06_final_fiori_app_uat.png`) :**
+![Résultat Final : Application Fiori en Production](screenshots/06_final_fiori_app_uat.png)
+
+---
 *Projet réalisé et certifié 100% Clean Core Low-Code Extensibility.*
+
 
