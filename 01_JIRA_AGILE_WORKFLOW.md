@@ -7,9 +7,9 @@ Ce document présente le carnet de produit (Product Backlog), les Epics, les Use
 ---
 
 ## 📸 Vue Réelle de notre Backlog JIRA Importé
-Voici la capture d'écran officielle de notre projet Jira (`Gestion-des-Demandes-de-Mat-riel-IT-T-l-travail`) avec l'ensemble des 9 tickets importés et prêts pour la planification de Sprint :
+Voici la capture d'écran officielle de notre projet Jira (`Gestion-des-Demandes-de-Mat-riel-IT-T-l-travail`) avec l'ensemble des tickets importés et prêts pour la planification de Sprint :
 
-> **📌 Capture d'écran du Backlog JIRA à insérer sous :** `screenshots/00_jira_backlog.png`
+> **📌 Capture d'écran du Backlog JIRA :** `screenshots/00_jira_backlog.png`
 
 ![Backlog JIRA Importé dans le projet](screenshots/00_jira_backlog.png)
 
@@ -111,7 +111,7 @@ Pour qu'un ticket JIRA soit validé et déplacé dans la colonne **"DONE" (Termi
 * **Tâches Techniques :**
   1. Ouvrir l'application **Custom Catalog Extensions** (`F1484`).
   2. Assigner l'app `YY1_EQUIPMENTREQUEST` au catalogue métier des salariés (ex: `SAP_CORE_BC_EXT_FLX` ou `SAP_BR_EMPLOYEE`).
-  3. Effectuer un test de connexion avec un compte utilisateur de test (Recette UAT) et prendre une capture d'écran de validation.
+  3. Effectuer un test de connexion avec un compte utilisateur de test (Recette UAT).
 * **Critère d'Acceptation :** La tuile s'affiche sur le Launchpad de l'utilisateur final et permet d'enregistrer une demande complète de bout en bout.
 
 ---
@@ -119,6 +119,4 @@ Pour qu'un ticket JIRA soit validé et déplacé dans la colonne **"DONE" (Termi
 ## 🏆 Clôture du Sprint 1 & Sign-Off Clean Core
 * **Statut du Sprint :** **CLÔTURÉ (DONE)** 🎯
 * **Audit Clean Core :** 100% Conforme (Zéro modification de table standard, Zéro ABAP classique obsolète).
-* **Validation Recette (UAT) :** Confirmée et archivée dans la galerie de captures d'écran GitHub (`screenshots/06_final_fiori_app_uat.png`).
-* **Livraison :** Version v1.1.0 déployée en production et mise à disposition des utilisateurs sur le Launchpad.
-
+* **Livraison :** Version v1.0.0 validée techniquement en mode Low-Code Clean Core.

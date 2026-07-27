@@ -45,7 +45,7 @@ graph TD
 
 ## 📥 Gestion de Projet Agile & Backlog JIRA (GDDDMRITLT)
 Ce projet est entièrement découpé en tâches professionnelles (Scrum / Agile) et importé dans notre instance Jira Software (projet `GDDDMRITLT`).
-* 👉 Consultez le fichier **[01_JIRA_AGILE_WORKFLOW.md](01_JIRA_AGILE_WORKFLOW.md)** pour voir le détail technique complet des 9 tickets (de `GDDDMRITLT-1` à `GDDDMRITLT-9`).
+* 👉 Consultez le fichier **[01_JIRA_AGILE_WORKFLOW.md](01_JIRA_AGILE_WORKFLOW.md)** pour voir le détail technique complet des tickets du projet.
 
 ### 📸 Vue du Backlog JIRA Importé :
 > **📌 Capture de la liste de nos tickets dans JIRA :** `screenshots/00_jira_backlog.png`
@@ -96,22 +96,4 @@ Voici les étapes techniques précises réalisées dans votre système SAP Fiori
 ![Capture 4 : Logique In-App dans l'éditeur Web](screenshots/04_custom_logic_editor.png)
 
 ---
-
-### 🛠️ Étape 5 : Assignation au Catalogue et Découverte de la Tuile (Ticket GDDDMRITLT-9)
-1. Dans l'application **Custom Catalog Extensions** (`F1484`), assignez `YY1_EQUIPMENTREQUEST` à votre catalogue utilisateur.
-2. Retournez sur le Launchpad : Votre tuile est prête !
-> **📌 Image de validation (`screenshots/05_fiori_launchpad_tile.png`) :**
-![Capture 5 : La tuile sur le Fiori Launchpad](screenshots/05_fiori_launchpad_tile.png)
-
----
-
-### 🏁 Étape 6 : RÉSULTAT FINAL EN PRODUCTION (Recette UAT & UI Adaptation - Ticket GDDDMRITLT-7)
-Voici le résultat ultime de votre développement Low-Code en fonctionnement sur le Launchpad ! L'application Fiori Elements est active, les données de test sont créées, la logique pré-remplit le statut sur `NEW` et les colonnes ont été réorganisées ergonomiquement via *Adapt UI*.
-
-> **📌 Image finale de votre application en production (`screenshots/06_final_fiori_app_uat.png`) :**
-![Résultat Final : Application Fiori en Production](screenshots/06_final_fiori_app_uat.png)
-
----
 *Projet réalisé et certifié 100% Clean Core Low-Code Extensibility.*
-
-
