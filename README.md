@@ -60,7 +60,7 @@ Voici les étapes techniques précises réalisées dans votre système SAP Fiori
 ### 🛠️ Étape 1 : Ouverture de l'application "Custom Business Objects" (Ticket GDDDMRITLT-2)
 1. Connectez-vous à votre SAP Fiori Launchpad (via `/n/UI2/FLP`).
 2. Tapez `Custom Business Objects` dans la recherche et ouvrez l'application (`F1712`).
-> **📌 Image de validation (`screenshots/01_cbo_app_open.png`) :**
+> **📌 Capture de validation UAT certifiée (`screenshots/01_cbo_app_open.png`) :**
 ![Capture 1 : Application Custom Business Objects](screenshots/01_cbo_app_open.png)
 
 ---
@@ -69,15 +69,15 @@ Voici les étapes techniques précises réalisées dans votre système SAP Fiori
 1. Cliquez sur **`+` (New)**.
 2. Nom : `Equipment Request` | Identifier : `YY1_EQUIPMENTREQUEST`.
 3. **Cochez les 3 cases Low-Code :** ☑️ *Determination and Validation*, ☑️ *UI Generation*, ☑️ *Service Generation*.
-> **📌 Image de validation (`screenshots/02_cbo_properties_checked.png`) :**
+> **📌 Capture de validation UAT certifiée (`screenshots/02_cbo_properties_checked.png`) :**
 ![Capture 2 : Configuration du Custom Business Object](screenshots/02_cbo_properties_checked.png)
 
 ---
 
 ### 🛠️ Étape 3 : Définition des Champs et Publication (Ticket GDDDMRITLT-4)
-1. Ajoutez les 5 champs : `RequesterName` (Text 40), `Department` (Text 20), `EquipmentType` (Code List / Text), `EstimatePrice` (Amount + Currency), `RequestStatus` (Code List / Text).
+1. Ajoutez les 5 champs : `RequesterName` (Text 40), `Department` (Text 20), `EquipmentType` (Code List : `ECRAN`, `CLAVIER`, `CASQUE`), `EstimatedPrice` (Amount + Currency), `RequestStatus` (Code List : `NEW`, `APPR`, `REJ`).
 2. Cliquez sur **Publish** et attendez 2 minutes que le statut passe à **Published**.
-> **📌 Image de validation (`screenshots/03_fields_list_published.png`) :**
+> **📌 Capture de validation UAT certifiée (`screenshots/03_fields_list_published.png`) :**
 ![Capture 3 : Liste des champs publiée](screenshots/03_fields_list_published.png)
 
 ---
