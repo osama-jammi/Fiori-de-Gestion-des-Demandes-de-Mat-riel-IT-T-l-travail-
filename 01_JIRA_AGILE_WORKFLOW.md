@@ -113,3 +113,12 @@ Pour qu'un ticket JIRA soit validé et déplacé dans la colonne **"DONE" (Termi
   2. Assigner l'app `YY1_EQUIPMENTREQUEST` au catalogue métier des salariés (ex: `SAP_CORE_BC_EXT_FLX` ou `SAP_BR_EMPLOYEE`).
   3. Effectuer un test de connexion avec un compte utilisateur de test (Recette UAT) et prendre une capture d'écran de validation.
 * **Critère d'Acceptation :** La tuile s'affiche sur le Launchpad de l'utilisateur final et permet d'enregistrer une demande complète de bout en bout.
+
+---
+
+## 🏆 Clôture du Sprint 1 & Sign-Off Clean Core
+* **Statut du Sprint :** **CLÔTURÉ (DONE)** 🎯
+* **Audit Clean Core :** 100% Conforme (Zéro modification de table standard, Zéro ABAP classique obsolète).
+* **Validation Recette (UAT) :** Confirmée et archivée dans la galerie de captures d'écran GitHub (`screenshots/06_final_fiori_app_uat.png`).
+* **Livraison :** Version v1.1.0 déployée en production et mise à disposition des utilisateurs sur le Launchpad.
+
